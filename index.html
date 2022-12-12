@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Website Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+    .navbar{
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #5E4485;
+      color: #fff;
+      padding: 1% 0;
+      font-size: 1.2em;
+      border: 0;
+    }
+
+    #myNavbar{
+     float: right;
+    }
+
+   
+    .navbar-brand{
+        float: left;
+        min-height: 55px;
+        padding: 0 15px 5px;
+        padding-right: 600px;
+    }
+    
+    .navbar-inverse .navbar-nav .active a,
+    .navbar-inverse .navbar-nav .active a:focus,
+    .navbar-inverse .navbar-nav .active a:hover{
+      color: #fff;
+      background-color: #5E4485;
+
+    }
+
+    .navbar-inverse .navbar-nav li a{
+      color: #d5d5d5; 
+    }
+
+    .carousel-caption{
+      top: 50%;
+      transform: translateY(-50%);
+      text-transform: uppercase;
+    }
+
+    .btn{
+      font-size: 18px;
+      color: #fff;
+      padding: 12px 22px;
+      background: #5E4485;
+      border: 2px solid #fff;
+    }
+
+    .container{
+      margin: 4% auto;
+      width: 100%;
+    }
+
+    #icon{
+      max-width: 200px;
+      margin: 1% auto;
+     
+    }
+
+    h2,h3,h4{
+      font-weight: 600;
+    }   
+ 
+    footer{
+      width: 100%;
+      background-color: #5E4485;
+      padding: 3%;
+      color: #fff;
+    }
+
+    .fa{
+      padding: 15px;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .fa:hover{
+      color: #D5D5D5;
+      text-decoration: none;
+    }
+
+   /* start media Query */
+
+    @media (max-width:600px){
+      .carousel-caption{
+        display: none;
+      }
+      #icon{
+      max-width: 150px;
+      }
+      h2{
+        font-size:1.9em;
+      }  
+      
+    }
+
+    @media (max-width:900px){
+      .fa{
+        font-size: 25px;
+        padding: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>            
+            </button>
+            <a href="#" class="navbar-brand"><img src="img/w3newbie.png" alt=""></a>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>                
+              </ul>
+            </div>
+          </div>
+        </div>
+     </nav>
+     
+     <div class="carousel slide" id="myCarousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>          
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/mountains.png" alt="">
+            <div class="carousel-caption">
+                <h1>Get to know Bootstrap</h1><br>
+                <button type="button" class="btn bt-default">Get started</button>
+            </div>
+          </div><!--End Active-->
+          <div class="item">
+            <img src="img/snow.png" alt="">
+          </div>
+          <div class="item">
+            <img src="img/red.png" alt="">
+          </div>
+        </div>
+
+        <!-- Start slider controls-->
+        <a class="letf carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-left" aris-hidden="true"><span>
+            <span class="sr-only"> Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-right" aris-hidden="true"><span>
+            <span class="sr-only"> Next</span>
+        </a>
+     </div><!--End the slider-->
+
+     <div class="container text-center">
+        <h2>What we're Using</h2>
+        <div class="row">
+          <div class="col-sm-4">
+              <img src="img/html5.png" id="icon" alt="">
+              <h4>HTML5</h4>
+          </div>
+          <div class="col-sm-4">
+            <img src="img/bootstrap.png" id="icon" alt="">
+            <h4>Bootstrap</h4>
+          </div>
+          <div class="col-sm-4">
+             <img src="img/css3.png" id="icon" alt="">
+             <h4>CSS3</h4>
+          </div>
+        </div>
+     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Here's the cool thing about Bootstrap...</b></h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae mollitia inventore fugit numquam consequatur id odit? Ea laudantium consequuntur voluptates rem! Provident neque at perspiciatis? Fugiat voluptates nemo provident delectus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente nulla maiores quidem adipisci illum pariatur eos voluptatum. Totam placeat dignissimos consequuntur ipsa quam eos possimus perferendis minima ipsam corrupti.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur possimus eveniet aspernatur quasi optio modi, ea enim nulla dolorem voluptatum ullam, repellendus aliquid harum? Voluptatem perspiciatis similique nulla sint beatae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa beatae numquam quae aspernatur. Suscipit aspernatur, temporibus maxime ex, iste porro accusantium minima qui ea ipsam facilis deleniti perferendis numquam. </p>
+        </div>
+        <div class="col-md-6">
+          <img src="img/bootstrap2.jpg" alt="" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <h4>Built with Saas</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae mollitia inventore fugit numquam consequatur id odit? Ea laudantium consequuntur voluptates rem! Provident neque at perspiciatis? Fugiat voluptates nemo provident delectus?</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <img src="img/sass.png" alt="" class="img-responsive">
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <h4>And Less</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae mollitia inventore fugit numquam consequatur id odit? Ea laudantium consequuntur voluptates rem! Provident neque at perspiciatis? Fugiat voluptates nemo provident delectus?</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <img src="img/less.png" alt="" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h4><a href="#hidden" data-toggle="collapse"> Care to learn more about Bootstrap?</a></h4>
+        <div class="collapse"  id="hidden">
+          <h4>Here's the cool thing about Bootstrap...</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae mollitia inventore fugit numquam consequatur id odit? Ea laudantium consequuntur voluptates rem! Provident neque at perspiciatis? Fugiat voluptates nemo provident delectus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente nulla maiores quidem adipisci illum pariatur eos voluptatum. Totam placeat dignissimos consequuntur ipsa quam eos possimus perferendis minima ipsam corrupti.</p><br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur possimus eveniet aspernatur quasi optio modi, ea enim nulla dolorem voluptatum ullam, repellendus aliquid harum? Voluptatem perspiciatis similique nulla sint beatae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa beatae numquam quae aspernatur. Suscipit aspernatur, temporibus maxime ex, iste porro accusantium minima qui ea ipsam facilis deleniti perferendis numquam. </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <div class="row">
+          <div class="col-sm-4">
+            <h3>Contact Us</h3><br>
+            <h4>Our address and contact info here.</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>Connect</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="img/bunny.png" alt="" class="icon">
+          </div>
+      </div>
+    </footer>
+</body>
+</html>
+
